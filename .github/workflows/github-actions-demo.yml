@@ -1,5 +1,5 @@
 name: gh-actions-express-js-demo
-run-name: ${{ github.actor }} running ExpressJS Tests 🚀
+run-name: ${{ github.actor }} running ExpressJS Actions 🚀
 on: [push]
 jobs:
   test:
