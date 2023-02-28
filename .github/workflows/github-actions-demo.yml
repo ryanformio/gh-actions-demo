@@ -1,8 +1,8 @@
-name: GitHub Actions Demo
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+name: gh-actions-express-js-demo
+run-name: ${{ github.actor }} running ExpressJS App Integration 🚀
 on: [push]
 jobs:
-  Explore-GitHub-Actions:
+  tests:
     runs-on: ubuntu-latest
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
