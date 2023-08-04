@@ -9,6 +9,11 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    services:
+      mongodb:
+        image: mongo:4.4
+        ports:
+          - 27017:27017
 
     strategy:
       matrix:
@@ -36,3 +41,9 @@ jobs:
           ${{ runner.os }}-yarn-
     - run: yarn install --frozen-lockfile
     - run: yarn test
+    - name: Upload test results
+      if: always()
+      uses: actions/upload-artifact@v2
+      with:
+        name: test-results
+        path: test-results.xml
