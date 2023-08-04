@@ -7,6 +7,6 @@ describe('Test the root path', () => {
         const response = await request('http://localhost:3005').get('/');
         // console.log(response)
         expect(response.statusCode).toBe(200);
-        expect(response.text).toBe('Hello World!');
+        expect(response.text).toBe('Hello Universe!');
     });
 });
